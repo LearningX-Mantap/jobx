@@ -1115,7 +1115,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .progress-table .table-row {
   padding: 15px 0;
-  border-top: 1px solid #edf3fd;
+  border-top: 1px solid #fff;
   display: flex;
 }
 
@@ -1883,12 +1883,12 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background-color: #fefefe;
+  background-color: #fffaf2;
 }
 
 #header.header-scrolled{
   /* background: rgba(0, 0, 0, 0.8); */
-  background-color: #edf3fd;
+  background-color: #fffaf2;
   transition: all 0.5s;
 
 }
@@ -1911,7 +1911,7 @@ h1, h2, h3, h4, h5, h6 {
 #header #logo h1 a, #header #logo h1 a:hover {
   color: #fff;
   padding-left: 10px;
-  border-left: 4px solid #49e4fa;
+  border-left: 4px solid #FF6F1A;
 }
 
 #header #logo img {
@@ -1929,16 +1929,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ticker-btn {
-  background: #eff8ff;
-  color: #2E90FA !important;
+  background: #faf1ec;
+  color: #FF6F1A !important;
   padding: 6px 20px !important;
   border-radius: 12px;
   text-transform: uppercase;
 }
 
 .ticker-btn:hover {
-  background: rgba(73, 228, 250, 0.2);
-  color: #49e4fa;
+  background: rgba(255, 153, 0, 0.2);
 }
 
 @media (max-width: 960px) {
