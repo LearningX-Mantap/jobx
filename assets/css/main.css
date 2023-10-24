@@ -2219,15 +2219,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 /* , .banner-area .overlay-bg */
 .p1-gradient-bg, .sidebar .single-slidebar .cat-list li:hover, .callto-action-area, .single-price:hover .price-bottom, .single-service:hover, .submit-right, .submit-left, .contact-btns, .form-area .primary-btn {
-  background-image: -moz-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
-  background-image: -webkit-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
-  background-image: -ms-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
+  background-image: -moz-linear-gradient(0deg, #97565f 0%, #971e2e 100%);
+  background-image: -webkit-linear-gradient(0deg, #97565f 0%, #971e2e 100%);
+  background-image: -ms-linear-gradient(0deg, #97565f 0%, #971e2e 100%);
 }
 
 .p1-gradient-color, .feat-txt h1 {
-  background: -moz-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
-  background: -webkit-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
-  background: -ms-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
+  background: -moz-linear-gradient(0deg, #97565f 0%, #971e2e 100%);
+  background: -webkit-linear-gradient(0deg, #97565f 0%, #971e2e 100%);
+  background: -ms-linear-gradient(0deg, #97565f 0%, #971e2e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2308,6 +2308,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .banner-area {
   background: url(../jobx/banner.png) center;
   background-size: cover;
+
 }
 
 .banner-area .overlay-bg {
@@ -3808,10 +3809,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 .blog-banner-area {
   background: url(../img/elements/blog/blog-banner.jpg) center;
   background-size: cover;
+
 }
 
 .blog-banner-area .overlay-bg {
   background: rgba(0, 0, 0, 0.55);
+  
 }
 
 .blog-banner-wrap {
