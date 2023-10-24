@@ -3519,6 +3519,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-service {
+  border-radius: 12px;
   background-color: #fff;
   /* background-color: #f9f9ff; */
   padding: 15px;
@@ -3535,7 +3536,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   cursor: pointer;
 }
 
-.single-service:hover h4, .single-service:hover p, .single-service:hover .lnr {
+.single-service:hover h4,.single-service:hover h5, .single-service:hover p, .single-service:hover .lnr {
   color: #fff;
 }
 
