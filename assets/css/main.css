@@ -1883,12 +1883,12 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background-color: #fffaf2;
+  background-color: #fff
 }
 
 #header.header-scrolled{
   /* background: rgba(0, 0, 0, 0.8); */
-  background-color: #fffaf2;
+  background-color: #fff;
   transition: all 0.5s;
 
 }
