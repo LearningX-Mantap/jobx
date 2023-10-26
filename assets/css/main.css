@@ -3130,7 +3130,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-area .primary-btn {
-  background-color: #49e4fa;
+  background: -moz-linear-gradient(0deg, #ffb31a 0%, #FF6F1A 100%);
+  background: -webkit-linear-gradient(0deg, #ffb31a 0%, #FF6F1A 100%);
+  background: -ms-linear-gradient(0deg, #ffb31a 0%, #FF6F1A 100%);
   line-height: 42px;
   padding-left: 30px;
   padding-right: 60px;
