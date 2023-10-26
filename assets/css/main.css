@@ -2302,6 +2302,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 28px;
   font-weight: 500;
 }
+a {
+  color: #777777; /* Mengatur warna teks tautan menjadi hitam */
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
 .card .card-footer p.job{
   font-weight: 600;
   font-size: 16px;
@@ -2319,7 +2323,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   max-height: 65px;
   width: auto;
 }
-
+.question p{
+  font-size: 20px;
+}
+.answer p{
+  font-size:16px ;
+}
 /* end iqbal */
 .primary-btn:hover {
   color: #fff;
