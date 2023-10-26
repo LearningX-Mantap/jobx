@@ -2217,7 +2217,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 /* , .banner-area .overlay-bg */
-.p1-gradient-bg, .sidebar .single-slidebar .cat-list li:hover, .single-price:hover .price-bottom, .single-service:hover,.single-service:hover .card-footer,.card-footer:hover, .submit-right, .submit-left, .contact-btns, .form-area .primary-btn {
+.p1-gradient-bg, .sidebar .single-slidebar .cat-list li:hover, .single-price:hover .price-bottom, .card:hover,.card:hover .card-footer,.card-footer:hover, .submit-right, .submit-left, .contact-btns, .form-area .primary-btn {
   background-image: -moz-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
   background-image: -webkit-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
   background-image: -ms-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
@@ -2268,7 +2268,59 @@ body.mobile-nav-active #mobile-nav-toggle {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+/* CSS iqbal */
+.card{
+  background-color: #fff;
+  min-height: 300px;
+  border-radius: 12px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border: #ED4035 solid 1px;
+  padding-bottom: 0;
+}
+.card:hover {
+  box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.5);
+  cursor: pointer;
+}
+.card:hover h4, .card-footer:hover h4,.card:hover h5, .card:hover p, .card:hover .lnr {
+  color: #fff;
+}
+.card p {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.card p {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.card .card-footer p.job{
+  font-weight: 600;
+  font-size: 16px;
+}
+.card .card-footer{
+  background-color: #fff;
+  border:none;
+  padding: 0 !important;
+}
+.card h4 .lnr {
+  margin-right: 15px;
+}
 
+.img-pt{
+  max-height: 65px;
+  width: auto;
+}
+
+/* end iqbal */
 .primary-btn:hover {
   color: #fff;
 }
@@ -3585,8 +3637,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  margin-top: 20px;
-  margin-bottom: 20px;
+ 
   font-size: 20px;
   line-height: 28px;
 }
