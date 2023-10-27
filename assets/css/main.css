@@ -2328,12 +2328,7 @@ a {
   max-height: 65px;
   width: auto;
 }
-.question p{
-  font-size: 20px;
-}
-.answer p{
-  font-size:16px ;
-}
+
 .btn-submit{
   background-image: -moz-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
   background-image: -webkit-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
@@ -2967,6 +2962,10 @@ a {
   font-weight: 600;
   line-height: 24px;
 }
+.card-body .question:hover {
+  color: #fff !important;
+}
+
 .callto-action-area .primary-btn {
   margin: 10px;
   text-transform: capitalize;
