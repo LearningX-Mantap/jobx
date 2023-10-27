@@ -2217,11 +2217,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 /* , .banner-area .overlay-bg */
-.p1-gradient-bg, .sidebar .single-slidebar .cat-list li:hover, .single-price:hover .price-bottom, .card:hover,.card:hover .card-footer,.card-footer:hover, .submit-right, .submit-left, .contact-btns, .form-area .primary-btn {
+.p1-gradient-bg, .sidebar .single-slidebar .cat-list li:hover, .single-price:hover .price-bottom, .submit-right, .submit-left, .contact-btns, .form-area .primary-btn {
   background-image: -moz-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
   background-image: -webkit-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
   background-image: -ms-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
-  /* background-image: -ms-linear-gradient(0deg, #FF6F1A 0%, #FF6F1A 100%); */
+}
+
+.list-job:hover {
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(to left, #FF6F1A, #ED4035);
 }
 
 .p1-gradient-color, .feat-txt h1 {
@@ -2285,7 +2290,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   cursor: pointer;
 }
 .card:hover h4, .card-footer:hover h4,.card:hover h5, .card:hover p, .card:hover .lnr {
-  color: #fff;
+  color: #111111;
 }
 .card p {
   -webkit-transition: all 0.3s ease 0s;
