@@ -2218,21 +2218,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 /* , .banner-area .overlay-bg */
 .p1-gradient-bg, .sidebar .single-slidebar .cat-list li:hover, .single-price:hover .price-bottom, .submit-right, .submit-left, .contact-btns, .form-area .primary-btn {
-  background-image: -moz-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
-  background-image: -webkit-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
-  background-image: -ms-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
+  background-image: -moz-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
+  background-image: -webkit-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
+  background-image: -ms-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
 }
 
 .list-job:hover {
   border-image-slice: 1;
   border-width: 3px;
-  border-image-source: linear-gradient(to left, #FF6F1A, #ED4035);
+  border-image-source: linear-gradient(to right, #FC9512, #FF0A6C);
 }
 
 .p1-gradient-color, .feat-txt h1 {
-  background: -moz-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
-  background: -webkit-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
-  background: -ms-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
+  background: -moz-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
+  background: -webkit-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
+  background: -ms-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
