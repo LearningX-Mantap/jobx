@@ -2334,6 +2334,21 @@ a {
 .answer p{
   font-size:16px ;
 }
+.btn-submit{
+  background-image: -moz-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
+  background-image: -webkit-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
+  background-image: -ms-linear-gradient(0deg, #FC9512 0%, #FF0A6C 100%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.btn-submit:hover{
+  color: #fff;
+  transition: 0.3s;
+}
 /* end iqbal */
 .primary-btn:hover {
   color: #fff;
@@ -2375,7 +2390,6 @@ a {
 .banner-area {
   background: url(../jobx/banner.png) center;
   background-size: cover;
-
 }
 
 .banner-area .overlay-bg {
@@ -3188,6 +3202,10 @@ a {
 
 .single-review .title {
   margin: 20px 0;
+}
+.img-carou{
+  height: 400px;
+  width: auto;
 }
 
 .single-review .star {
