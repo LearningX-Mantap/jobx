@@ -2961,10 +2961,14 @@ a {
   color: #F9FD22;
   font-weight: 600;
   line-height: 24px;
+  font-size: 20px;
 }
-.card-body .question:hover {
-  color: #fff !important;
+.answer {
+  font-size:16px;
+  line-height: 24px;
+  font-weight: 400;
 }
+
 
 .callto-action-area .primary-btn {
   margin: 10px;
