@@ -2224,9 +2224,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .list-job:hover {
+  border-image-slice: 1;
   border-width: 3px;
-  border-color: -moz-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
-  border-color: -webkit-linear-gradient(0deg, #FF6F1A 0%, #ED4035 100%);
+  border-image-source: linear-gradient(to left, #FF6F1A, #ED4035);
 }
 
 .p1-gradient-color, .feat-txt h1 {
