@@ -2378,7 +2378,6 @@ a {
 }
 
 .banner-content {
-  margin-top: -90px;
   text-align: center;
 }
 
@@ -2670,7 +2669,7 @@ a {
 
 .post-list .single-post {
   padding: 30px;
-  background-color: #f9f9ff;
+  background-color: #FFFEFA;
   margin-bottom: 30px;
 }
 
@@ -2831,7 +2830,7 @@ a {
 }
 
 .sidebar .single-slidebar {
-  background-color: #f9f9ff;
+  background-color: #FFFEFA;
   padding: 30px 20px;
   margin-bottom: 30px;
 }
