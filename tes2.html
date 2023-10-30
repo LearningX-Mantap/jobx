@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        var data = [
+            { nama: "PT Lotte", major: "Akuntansi", area: "Jakarta" },
+            { nama: "PT Daesang", major: "IT", area: "Surabaya" },
+            { nama: "Next TI", major: "TKJ", area: "Bandung" },
+            { nama: "PT. Daehong Communications Indonesia", major: "IT", area: "Jakarta" },
+        ];
+    
+        // Fungsi untuk memfilter data berdasarkan input pencarian dan dropdown
+        function filterData() {
+            var searchKeyword = $("#searchInput").val().toLowerCase();
+            var selectedMajor = $("#selectArea").val();
+            var selectedArea = $("#selectMajor").val();
+    
+            var filteredData = data.filter(function (item) {
+                return (item.nama.toLowerCase().includes(searchKeyword) || searchKeyword === "") &&
+                    (selectedMajor === "Semua" || item.major === selectedMajor) &&
+                    (selectedArea === "Semua" || item.area === selectedArea);
+            });
+    
+            updateUI(filteredData);
+        }
+    
+        // Fungsi untuk memperbarui tampilan dengan data yang difilter
+        function updateUI(filteredData) {
+            var dataContainer = $("#dataContainer");
+            dataContainer.empty();
+    
+            filteredData.forEach(function (item) {
+                var card = '<div class="col-4 mb-3"><div class="card"><div class="card-body">' +
+                    '<h5 class="card-title">' + item.nama + '</h5>' +
+                    '<p class="card-text">Major: ' + item.major + '</p>' +
+                    '<p class="card-text">Area: ' + item.area + '</p>' +
+                    '</div></div></div>';
+                dataContainer.append(card);
+            });
+        }
+    
+        // Memanggil filterData saat input atau dropdown berubah
+        $("#searchInput, #selectArea, #selectMajor").on("input", filterData);
+    
+        // Memuat data awal
+        filterData();
+    });
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Data Major</h1>
+        <input id="searchInput" class="form-control" placeholder="Cari major...">
+        <select id="selectArea" class="form-control">
+            <option value="Semua">Semua</option>
+            <option value="TKJ">TKJ</option>
+            <option value="IT">IT</option>
+            <option value="Akuntansi">Akuntansi</option>
+        </select>
+        <select id="selectMajor" class="form-control">
+            <option value="Semua">Semua</option>
+            <option value="Jakarta">Jakarta</option>
+            <option value="Surabaya">Surabaya</option>
+            <option value="Bandung">Bandung</option>
+        </select>
+        <div class="row" id="dataContainer">
+            <!-- Data akan ditampilkan di sini sebagai komponen card -->
+        </div>
+    </div>
+</body>
+</html>

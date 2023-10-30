@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="LearningX Team">
+	<!-- Meta Description -->
+	<meta name="description" content="Situs cari kerja bersama LearningX">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="LearningX JobX">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>JobX - Cari Kerja Mantap - LearningX</title>
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+		rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="assets/css/nice-select.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+	<script>
+		$(document).ready(function () {
+			alert('leee');
+			var data = [
+				{ nama: "PT Lotte", major: "Akuntansi", area: "Jakarta" },
+				{ nama: "PT Daesang", major: "IT", area: "Surabaya" },
+				{ nama: "Next TI", major: "TKJ", area: "Bandung" },
+				{ nama: "PT. Daehong Communications Indonesia", major: "IT", area: "Jakarta" },
+			];
+		
+			// Fungsi untuk memfilter data berdasarkan input pencarian dan dropdown
+			function filterData() {
+				var searchKeyword = $("#searchInput").val().toLowerCase();
+				var selectedMajor = $("#selectArea").val();
+				var selectedArea = $("#selectMajor").val();
+		
+				var filteredData = data.filter(function (item) {
+					return (item.nama.toLowerCase().includes(searchKeyword) || searchKeyword === "") &&
+						(selectedMajor === "Semua" || item.major === selectedMajor) &&
+						(selectedArea === "Semua" || item.area === selectedArea);
+				});
+		
+				updateUI(filteredData);
+			}
+		
+			// Fungsi untuk memperbarui tampilan dengan data yang difilter
+			function updateUI(filteredData) {
+				var dataContainer = $("#dataContainer");
+				dataContainer.empty();
+		
+				filteredData.forEach(function (item) {
+					var card = '<div class="col-4 mb-3"><div class="card"><div class="card-body">' +
+						'<h5 class="card-title">' + item.nama + '</h5>' +
+						'<p class="card-text">Major: ' + item.major + '</p>' +
+						'<p class="card-text">Area: ' + item.area + '</p>' +
+						'</div></div></div>';
+					dataContainer.append(card);
+				});
+			}
+		
+			// Memanggil filterData saat input atau dropdown berubah
+			$("#searchInput, #selectArea, #selectMajor").on("input", filterData);
+		
+			// Memuat data awal
+			filterData();
+		});
+		</script>
+</head>
+
+<body>
+
+	<header id="header" id="home">
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="assets/jobx/logo_navbar.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class="menu-active"><a href="resume.html">Resume</a></li>
+						<li><a href="about-us.html">Career</a></li>
+						<li><a href="category.html">Korea Language</a></li>
+						<li><a href="price.html">Top 50 Companies</a></li>
+
+					
+						<li><a class="ticker-btn" href="#">SignUp</a></li>
+						<li><a class="ticker-btn" href="#"><i class="fa fa-sign-in"
+									aria-hidden="true"></i>&nbsp;Login</a></li>
+					</ul>
+				</nav><!-- #nav-menu-container -->
+			</div>
+		</div>
+	</header><!-- #header -->
+
+
+	<!-- start banner Area -->
+	<section class="banner-area relative" id="home">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row fullscreen d-flex align-items-center justify-content-center">
+				<div class="banner-content col-lg-12">
+					<div class="kiri">
+						<img src="assets/jobx/logo_white.png" alt="" class="w-25">
+						<h1 class="text-white">
+							Cari Kerja, Menjadi Lebih Mudah
+						</h1>
+					</div>
+					<form action="search.html" class="serach-form-area">
+						<div class="row justify-content-center form-wrap">
+							<div class="col-lg-4 form-cols">
+								<input id="searchInput" type="text" class="form-control" name="search"
+									placeholder="Certificate Preferred Job">
+							</div>
+							<div class="col-lg-3 form-cols">
+								<div class="default-select" id="default-selects">
+									<select id="selectArea">
+										<option value=" 1">Area, City, & Town</option>
+										<option value="2">Pekanbaru</option>
+										<option value="3">Jakarta</option>
+										<option value="4">Balikpapan</option>
+										<option value="5">Surabaya</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-3 form-cols">
+								<div class="default-select" id="default-selects2">
+
+									<select id="selectMajor">
+										<option value="none">Major Preferred Jobs</option>
+										<option value="tkj">Teknik Komputer dan Jaringan</option>
+										<option value="elektronika">Teknik Elektronika</option>
+										<option value="otomotif">Teknik Otomotif</option>
+										<option value="mesin">Teknik Mesin</option>
+										<option value="bangunan">Teknik Bangunan</option>
+										<option value="listrik">Teknik Listrik</option>
+										<option value="akuntansi">Akuntansi</option>
+										<option value="administrasi">Administrasi Perkantoran</option>
+										<option value="kecantikan">Kecantikan (Tata Rias Kecantikan)</option>
+										<option value="tataboga">Tata Boga</option>
+										<option value="multimedia">Multimedia</option>
+										<option value="pariwisata">Pariwisata</option>
+										<option value="permesinan-kapal">Teknik Permesinan Kapal</option>
+										<option value="farmasi">Farmasi</option>
+										<option value="pengelasan">Teknik Pengelasan</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-2 form-cols">
+								<button type="button" class="btn btn-info">
+									<span class="lnr lnr-magnifier"></span> Search
+								</button>
+							</div>
+						</div>
+					</form>
+					<p class="text-white"> <span>Search by tags:</span> Tecnology, Business, Consulting, IT Company,
+						Design, Development</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+
+	<!-- Start features Area -->
+	<section class="features-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature">
+						<h4>Searching</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature">
+						<h4>Applying</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature">
+						<h4>Security</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature">
+						<h4>Notifications</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End features Area -->
+
+
+	<!-- Start feature-cat Area -->
+	<section class=" pt-100" id="category">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-12">
+					<div class="title text-center">
+						<h1 class="mb-10">Pusat Perekrutan VVIP</h1>
+						<p>Dapatkan pekerjaan yang kamu inginkan.</p>
+					</div>
+				</div>
+			</div>
+			
+				<div class="row" id="dataContainer">
+					<!-- Data akan ditampilkan di sini sebagai komponen card -->
+				</div>
+			
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 mb-3 list-job">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/lotte_.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">PT Lotte Shopping Indonesia</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Korea Interpreter</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/java.png" alt="">
+						<div class="card-body  d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">Next TI</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Java Web Developer</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/daehong.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">PT. Daehong Communications Indonesia</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Account Executive (Korean Speaker)</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/hanna_glow.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">Hanna Berkat Indonesia</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Graphic Designer Specialist</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/hanwha_life.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">Hanwha Life Insurance Indonesia</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Actuary - Reinsurance</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/daesang.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">PT Daesang
+								Ingredients Indonesia </p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Technical Sales Staff Food Product</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/touslesjours.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">PT. CJ Foodville Bakery and Cafe Indonesia ( TOUS les JOURS )
+							</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">B2B Senior Associate</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/hanabank.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">PT Bank KEB Hana Indonesia</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Relationship Manager Global Marketing</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/ptmico.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">PT Mico BioMed Indonesia</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Office Administrator</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/valeo.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">Valeo</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Project Manager</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/kotra.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">Korea Trade Investment Promotion Agency</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Secretary & General Admin</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/kgroup.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">The K Group</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Finance Accounting &
+								Tax Manager</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/kbinsurance.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">PT KB Insurance Indonesia</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Korean Business Project Staff</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<a href="job_desc.html" class="card p-2 list-job mb-3">
+						<img class="img-fluid mt-10 img-pt  mx-auto d-block" src="assets/jobx/ktg.png" alt="">
+						<div class="card-body d-flex flex-column align-items-center justify-content-center">
+							<p class="text-center">PT Korea Tomorrow & Global Indonesia</p>
+						</div>
+						<div class="card-footer">
+							<p class="text-center job">Sales Supervisor</p>
+						</div>
+					</a>
+				</div>
+
+			</div>
+
+
+
+		</div>
+	</section>
+	<!-- End feature-cat Area -->
+
+
+	<!-- Start callto-action Area -->
+	<section class="callto-action-area section-gap mt-5" id="join">
+		<div class="">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content col-lg-9">
+					<h1 class="judul">Benefit JobX</h1>
+					<!-- <div class="title text-center">
+					</div> -->
+					<div class="row mt-3">
+						<div class="col-lg-4 col-md-12 benefitx">
+							<div class="">
+								<div class="  d-flex flex-column align-items-center justify-content-center">
+									<img class="mt-2 rounded-circle benefit-image" src="assets/jobx/benefit1.png"
+										alt="">
+									<p class="question mt-2">Apakah Anda bertanya-tanya pekerjaan apa yang tepat untuk
+										Anda?</p>
+									<br>
+									<p class="answer text-white" style="font-size: 16px;text-align: center">Sekarang,
+										carilah pekerjaan yang sesuai dengan jurusan Anda.
+										Melalui JobX, Anda hanya dapat memilih pekerjaan yang sesuai dengan jurusan
+										Anda.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 benefitx">
+							<div class="">
+								<div class="  d-flex flex-column align-items-center justify-content-center">
+									<img class="mt-2 rounded-circle benefit-image" src="assets/jobx/benefit2.png"
+										alt="">
+									<p class="question mt-2">Memberikan indikator evaluasi untuk kandidat pekerja</p>
+									<br>
+									<p class="answer text-white" style="font-size: 16px;text-align: center">JobX adalah
+										bisnis yang dimulai oleh LearningX, sebuah
+										platform pendidikan. Kami memberi perusahaan perekrutan indikator evaluasi
+										standar untuk semua pelamar yang dilatih melalui LearningX, membantu mereka
+										menemukan bakat yang lebih cocok.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 benefitx">
+							<div class="">
+								<div class="  d-flex flex-column align-items-center justify-content-center">
+									<img class="mt-2 rounded-circle benefit-image" src="assets/jobx/benefit3.png"
+										alt="">
+									<p class="question mt-2">Banyak pekerjaan
+										di daerah kami yang sangat menjanjikan</p>
+									<br>
+									<p class="answer text-white" style="font-size: 16px;text-align: center">Ada banyak
+										pekerjaan di dunia. Namun, sulit untuk meninggalkan
+										kampung halaman dan mencari tempat tinggal baru untuk mencari pekerjaan. Temukan
+										pekerjaan di daerah Anda hari ini.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End calto-action Area -->
+
+	<!-- Start banner Area -->
+	<section class="testimonial-area section-gap" id="review">
+		<div class="container">
+			<div class="single-slidebar">
+				<div class="active-relatedjob-carusel">
+					<div class="single-rated">
+						<img class="img-fluid" src="assets/jobx/banner_lp.png" alt="">
+					</div>
+					<div class="single-rated">
+						<img class="img-fluid" src="assets/jobx/banner_lp2.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- End banner Area -->
+
+
+	<!-- start footer Area -->
+	<footer class="footer-area section-gap" style="background-color:#fff">
+		<div class="container">
+			<img src="assets/jobx/logo_navbar.png" class="mb-20" alt="">
+			<br>
+			<div class="row">
+				<div class="col-12 col-md-4 mb-5 mb-lg-0">
+					<span class="h5 mb-3 d-block">Head Office</span>
+					<h5>Pacific Century Place 33rd floor</h5>
+					<p class="text-muted font-small mb-15">Jl. Jend. Sudirman No.52-53, RT.5/RW.3, Senayan, Kec. Kby.
+						Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12190</p>
+					<p class="text-muted font-small m-0"> Tel. (62-21) 5093 9000<br>Whatsapp: +62
+						859-3023-4075<br>Email. support@learningx.com</p>
+				</div>
+				<div class="col-12 col-md-4 mb-5 mb-lg-0">
+					<span class="h5 mb-3 d-block">Layanan Pengaduan Konsumen</span>
+					<p class="text-muted font-small m-0">Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga,
+						Kementerian Perdagangan Republik Indonesia, Whatsapp: 085311111010 (WA Only)</p>
+				</div>
+				<div class="col-6 col-md-2 mb-5 mb-lg-0">
+					<span class="h5">Perusahaan</span>
+					<ul class="footer-links mt-2">
+						<li><a target="_blank" href="https://www.lxinternational.com/en">Tentang Kami</a></li>
+						<li><a target="_blank" href="https://www.lxinternational.com/en">Struktur Organisasi</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md-2 mb-5 mb-lg-0">
+					<span class="h5">Bantuan</span>
+					<ul class="footer-links mt-2">
+						<li><a target="_blank" href="mailto:info@learningx.com">Laporkan Masalah</a></li>
+						<li><a target="_blank"
+								href="https://cdn-learningx.elemes.id/FAQ%20LearningX-1656247126452.pdf">FAQ</a></li>
+						<li><a target="_blank" href="https://www.learningx.com/term-and-condition">Syarat dan
+								Ketentuan</a></li>
+						<li><a target="_blank" href="https://www.learningx.com/privacy-policy">Kebijakan Privasi</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+	<script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+		</script>
+	<script src="assets/js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="assets/js/easing.min.js"></script>
+	<script src="assets/js/hoverIntent.js"></script>
+	<script src="assets/js/superfish.min.js"></script>
+	<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/jquery.sticky.js"></script>
+	<script src="assets/js/jquery.nice-select.min.js"></script>
+	<script src="assets/js/parallax.min.js"></script>
+	<script src="assets/js/mail-script.js"></script>
+	<script src="assets/js/main.js"></script>
+	
+</body>
+
+</html>
