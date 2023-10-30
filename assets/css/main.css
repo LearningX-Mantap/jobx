@@ -2001,7 +2001,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sf-arrows .sf-with-ul:after {
-  content: "\f107";
+  content: "\f0c9";
   position: absolute;
   right: 15px;
   font-family: FontAwesome;
@@ -2010,7 +2010,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sf-arrows ul .sf-with-ul:after {
-  content: "\f105";
+  content: "\f0c9";
 }
 
 /* Nav Meu Container */
@@ -2091,7 +2091,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav-toggle i {
-  color: #49e4fa;
+  color: #434345;
   font-weight: 900;
 }
 
